@@ -6,6 +6,11 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface MdBox {
+        "circle": boolean;
+        "shadow": "inner" | "outer";
+        "theme": "light" | "dark";
+    }
     interface MyComponent {
         /**
           * The first name
@@ -22,6 +27,12 @@ export namespace Components {
     }
 }
 declare global {
+    interface HTMLMdBoxElement extends Components.MdBox, HTMLStencilElement {
+    }
+    var HTMLMdBoxElement: {
+        prototype: HTMLMdBoxElement;
+        new (): HTMLMdBoxElement;
+    };
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
     }
     var HTMLMyComponentElement: {
@@ -29,10 +40,16 @@ declare global {
         new (): HTMLMyComponentElement;
     };
     interface HTMLElementTagNameMap {
+        "md-box": HTMLMdBoxElement;
         "my-component": HTMLMyComponentElement;
     }
 }
 declare namespace LocalJSX {
+    interface MdBox {
+        "circle"?: boolean;
+        "shadow"?: "inner" | "outer";
+        "theme"?: "light" | "dark";
+    }
     interface MyComponent {
         /**
           * The first name
@@ -48,6 +65,7 @@ declare namespace LocalJSX {
         "middle"?: string;
     }
     interface IntrinsicElements {
+        "md-box": MdBox;
         "my-component": MyComponent;
     }
 }
@@ -55,6 +73,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "md-box": LocalJSX.MdBox & JSXBase.HTMLAttributes<HTMLMdBoxElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
         }
     }

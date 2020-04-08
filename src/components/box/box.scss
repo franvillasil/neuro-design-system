@@ -1,0 +1,59 @@
+.container {
+    width: 150px;
+    height: 150px;
+    margin: 24px;
+    border-radius: 24px;
+    transition: all .3s ease-in-out;
+    outline: none;
+    border: 0;
+
+    &.light {
+        background-color: #edf0f3;
+        &.inner {
+            box-shadow: inset 16px 16px 24px 2px #d4dae5, inset -12px -12px 30px 2px #fefefe;
+        }
+        &.outer {
+            box-shadow: -6px -6px 8px 0px #fefefe, 6px 6px 8px 0px #d4dae5;
+        }
+
+        &.inner:hover, &.outer:hover {
+            box-shadow: none;
+        }
+        &.inner:active {
+            box-shadow: -6px -6px 8px 0px #fefefe, 6px 6px 8px 0px #d4dae5;
+        }
+        &.outer:active {
+            box-shadow: inset 16px 16px 24px 2px #d4dae5, inset -12px -12px 30px 2px #fefefe;
+        }
+    }
+
+    &.dark {
+        background-color: #303135;
+        &.inner {
+            box-shadow: inset 16px 16px 24px 2px #242424, inset -12px -12px 30px 2px #3c3d44;
+        }
+        &.outer {
+            box-shadow: -6px -6px 8px 0px #3c3d44, 6px 6px 8px 0px #242424
+        }
+
+        &.inner:hover, &.outer:hover {
+            box-shadow: none;
+        }
+        &.inner:active {
+            box-shadow: -6px -6px 8px 0px #3c3d44, 6px 6px 8px 0px #242424
+        }
+        &.outer:active {
+            box-shadow: inset 16px 16px 24px 2px #242424, inset -12px -12px 30px 2px #3c3d44;
+        }
+    }
+
+    &.circle {
+        border-radius: 50%;
+    }
+}
+
+.container:hover {
+    box-shadow: none;
+
+}
+
