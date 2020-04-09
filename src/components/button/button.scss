@@ -1,0 +1,74 @@
+.container {
+  margin: 24px;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+  outline: none;
+  border: 0;
+
+  &.light {
+    background-color: #edf0f3;
+    &.inner {
+        box-shadow: inset 8px 8px 16px #bec0c2, inset -8px -8px 16px #ffffff;
+    }
+    &.outer {
+        box-shadow:  8px 8px 16px #bec0c2, -8px -8px 16px #ffffff;
+    }
+
+    &.inner:hover {}
+    &.outer:hover {
+        background: linear-gradient(145deg, #feffff, #d5d8db);
+    }
+    &.inner:active {}
+    &.outer:active {
+        background: linear-gradient(145deg, #d5d8db, #feffff);
+    }
+
+    ion-icon {
+        font-size: 20px;
+        color: #6683aa;
+    }
+  }
+
+  &.dark {
+    background-color: #303135;
+    &.inner {
+        box-shadow: inset 5px 5px 12px #26272a, inset -5px -5px 12px #3a3b40;
+    }
+    &.outer {
+        box-shadow:  5px 5px 12px #26272a, -5px -5px 12px #3a3b40;
+    }
+
+    &.inner:hover {
+    }
+    &.outer:hover {
+        background: linear-gradient(145deg, #333439, #2b2c30);  
+    }
+    &.inner:active {
+    }
+    &.outer:active {
+        background: linear-gradient(145deg, #2b2c30, #333439);
+    }
+
+    ion-icon {
+        font-size: 20px;
+        color: #8f97a2;
+    }
+  }
+
+  &.circle {
+    border-radius: 50%;
+  }
+
+  &.small {
+    width: 36px;
+    height: 36px;
+  }
+  &.medium {
+      width: 48px;
+    height: 48px;
+  }
+  &.large {
+    width: 44px;
+    height: 444px;
+  }
+}
