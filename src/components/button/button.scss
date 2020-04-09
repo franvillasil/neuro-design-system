@@ -6,12 +6,12 @@
   border: 0;
 
   &.light {
-    background-color: #edf0f3;
+    background: #edf0f3;
     &.inner {
         box-shadow: inset 8px 8px 16px #bec0c2, inset -8px -8px 16px #ffffff;
     }
     &.outer {
-        box-shadow:  8px 8px 16px #bec0c2, -8px -8px 16px #ffffff;
+        box-shadow:  4px 4px 8px #bec0c2, -4px -4px 8px #ffffff;
     }
 
     &.inner:hover {}
@@ -35,7 +35,7 @@
         box-shadow: inset 5px 5px 12px #26272a, inset -5px -5px 12px #3a3b40;
     }
     &.outer {
-        box-shadow:  5px 5px 12px #26272a, -5px -5px 12px #3a3b40;
+        box-shadow:  4px 4px 8px #26272a, -4px -4px 8px #3a3b40;
     }
 
     &.inner:hover {
@@ -47,6 +47,11 @@
     }
     &.outer:active {
         background: linear-gradient(145deg, #2b2c30, #333439);
+        //box-shadow: 4px 4px 8px #26272a, -4px -4px 8px #2e3c4f;
+
+        ion-icon {
+               color: #6683aa;
+        }
     }
 
     ion-icon {
@@ -71,4 +76,11 @@
     width: 44px;
     height: 444px;
   }
+}
+
+@keyframes lightClick {
+  0% {
+    box-shadow: none;
+  }
+  100% {}
 }

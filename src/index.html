@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
   <title>Stencil Component Starter</title>
 
+  <link rel="stylesheet" type="text/scss" href="styles.scss">
+
   <script type="module" src="/build/mold-design.esm.js"></script>
   <script nomodule src="/build/mold-design.js"></script>
 
@@ -13,12 +15,14 @@
   <div style="display: flex; width: 100%; height: 100%; background-color: #303135; padding: 32px;">
     <md-button shadow="inner"></md-button>
     <md-button shadow="outer" icon="home"></md-button>
+    <md-nav></md-nav>
   </div>
   <div style="display: flex; width: 100%; height: 100%; background-color: #edf0f3; padding: 32px;">
     <md-button theme="light" shadow="inner"></md-button>
     <md-button theme="light" shadow="outer" icon="person"></md-button>
+    <md-nav theme="light"></md-nav>
   </div>
 
-  <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+  <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
 </body>
 </html>

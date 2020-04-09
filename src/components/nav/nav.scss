@@ -1,0 +1,13 @@
+nav {
+    border-radius: 8px;
+    
+    &.light {
+        background-color: #edf0f3;
+        box-shadow:  2px 2px 16px #bec0c2, -2px -2px 16px #ffffff;
+
+    }
+    &.dark {
+        background-color: #303135;
+        box-shadow:  2px 2px 12px #26272a, -2px -2px 12px #3a3b40;
+    }
+}

@@ -13,6 +13,9 @@ export namespace Components {
         "size": "small" | "medium" | "large";
         "theme": "light" | "dark";
     }
+    interface MdNav {
+        "theme": "light" | "dark";
+    }
     interface MyComponent {
         /**
           * The first name
@@ -35,6 +38,12 @@ declare global {
         prototype: HTMLMdButtonElement;
         new (): HTMLMdButtonElement;
     };
+    interface HTMLMdNavElement extends Components.MdNav, HTMLStencilElement {
+    }
+    var HTMLMdNavElement: {
+        prototype: HTMLMdNavElement;
+        new (): HTMLMdNavElement;
+    };
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
     }
     var HTMLMyComponentElement: {
@@ -43,6 +52,7 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "md-button": HTMLMdButtonElement;
+        "md-nav": HTMLMdNavElement;
         "my-component": HTMLMyComponentElement;
     }
 }
@@ -52,6 +62,9 @@ declare namespace LocalJSX {
         "icon"?: any;
         "shadow"?: "inner" | "outer";
         "size"?: "small" | "medium" | "large";
+        "theme"?: "light" | "dark";
+    }
+    interface MdNav {
         "theme"?: "light" | "dark";
     }
     interface MyComponent {
@@ -70,6 +83,7 @@ declare namespace LocalJSX {
     }
     interface IntrinsicElements {
         "md-button": MdButton;
+        "md-nav": MdNav;
         "my-component": MyComponent;
     }
 }
@@ -78,6 +92,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "md-button": LocalJSX.MdButton & JSXBase.HTMLAttributes<HTMLMdButtonElement>;
+            "md-nav": LocalJSX.MdNav & JSXBase.HTMLAttributes<HTMLMdNavElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
         }
     }

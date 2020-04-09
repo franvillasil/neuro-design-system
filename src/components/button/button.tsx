@@ -28,6 +28,7 @@ export class Button {
   render() {
     return <button class={this.getClass()}>
       {this.getIcon()}
+
     </button>;
   }
 }
